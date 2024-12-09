@@ -24,12 +24,6 @@ public class ServerV2 {
         DataOutputStream output = new DataOutputStream(socket.getOutputStream());
 
         while (true) {
-            /**
-             * 클라이언트로부터 문자 받기
-             * Client를 하나 더 만들어 시작하면 Server OS의 TCP 수신 버퍼에서 대기하게 된다.
-             * 여기서 소켓 객체 없이 서버 소켓만으로도 TCP 연결은 완료가 된다.
-             * 하지만 연결 이후에 서로 메세지를 주고 받으려면 소켓객체가 더 필요하다.
-             */
             String received = input.readUTF();
             log("client -> server: " + received);
 
