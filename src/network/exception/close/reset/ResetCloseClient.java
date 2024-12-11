@@ -39,5 +39,8 @@ public class ResetCloseClient {
             e.printStackTrace();
         }
         log("연결 종료: " + socket.isClosed());
+
+        // java.net.SocketException: Socket is closed
+        // 자신이 소켓을 닫은 이후에 `read()` , `write()` 호출
     }
 }
